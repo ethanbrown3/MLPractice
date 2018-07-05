@@ -16,11 +16,16 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCost) and gradient here.
     %
+    
+    % errors matrix: keep tracks of all the errors for all datapoints using
+    %                current values of theta. h(x)-y 
+    errors = (X * theta) - y;   
+    % multiply the errors by their respective theta(j)
+    temp0 = theta(1) - (alpha / m) * sum(errors.* X(:,1)); 
+    temp1 = theta(2) - (alpha / m) * sum(errors.* X(:,2));
+    theta = [temp0; temp1]
 
-
-
-
-
+ 
 
 
     % ============================================================
