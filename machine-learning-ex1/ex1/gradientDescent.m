@@ -21,7 +21,7 @@ for iter = 1:num_iters
     %                current values of theta. h(x)-y 
     errors = (X * theta) - y;   
     % multiply the errors by their respective theta(j)
-    temp0 = theta(1) - (alpha / m) * sum(errors.* X(:,1)); 
+    temp0 = theta(1) - (alpha / m) * sum(errors.* X(:,1));  % .* is element-wise multiplication
     temp1 = theta(2) - (alpha / m) * sum(errors.* X(:,2));
     theta = [temp0; temp1]
 

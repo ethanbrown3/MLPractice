@@ -25,15 +25,12 @@ sigma = zeros(1, size(X, 2));
 %
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
-
-
-
-
-
-
-
-
-
+for f = 1:size(X)(2)
+    feature = X(:,f);
+    mu = mean(feature);
+    sigma = std(feature);
+    X_norm(:,f) = (feature - mu) / sigma;
+end
 % ============================================================
 
 end
