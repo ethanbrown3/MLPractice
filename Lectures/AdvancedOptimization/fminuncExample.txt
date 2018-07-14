@@ -1,0 +1,25 @@
+octave:1> pwd
+ans = /Users/ethanbrown/Projects/MLPractice/Lectures/AdvancedOptimization
+octave:2> options = optimset('GradObj', 'on', 'MaxIter', '100');
+octave:3> initialTheta = zeros(2,1)
+initialTheta =
+
+   0
+   0
+
+octave:4> [optTheta, functionVal, exitFlag] = fminunc(@costFunction, initialTheta, options)
+optTheta =
+
+   5.0000
+   5.0000
+
+functionVal =    7.8886e-31
+exitFlag =  1
+octave:5> [optTheta, functionVal, exitFlag] = fminunc(@costFunction, initialTheta, options)
+optTheta =
+
+   5.0000
+   5.0000
+
+functionVal =    7.8886e-31
+exitFlag =  1
